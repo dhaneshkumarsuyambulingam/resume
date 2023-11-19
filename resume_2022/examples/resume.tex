@@ -1,0 +1,123 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[14pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{c70039}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+ \definecolor{darktext}{HTML}{414141}
+ \definecolor{text}{HTML}{000000}
+ \definecolor{graytext}{HTML}{5D5D5D}
+ \definecolor{lighttext}{HTML}{000000}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+\renewcommand{\baselinestretch}{1.7}
+
+
+\makeatletter
+\renewcommand{\cvsection}[1]{%
+  \vspace{\acvSectionTopSkip}
+  \color{gray}\vhrulefill{0.9pt}
+  \sectionstyle{#1}
+  \phantomsection
+  \color{gray}\vhrulefill{0.9pt}
+}
+\renewcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\strut\bodyfont\bfseries\color{text}\scshape\@sectioncolor #1}}
+\makeatother
+
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{Dhaneshkumar}{Suyambulingam}
+\position{Devops Engineer}
+\address{Chennai, India}
+
+\mobile{(+91) 9840122282}
+\email{dhaneshkumars95@gmail.com}
+%\homepage{www.posquit0.com}
+\github{dhaneshkumarsuyambulingam}
+\linkedin{Dhaneshkumar}
+% \gitlab{gitlab-id}
+% \twitter{@twit}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+
+\quote{``Simplicity is the soul of efficiency."}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Dhaneshkumar~~~·~~~Résumé}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{resume/summary.tex}
+\input{resume/skills.tex}
+
+\input{resume/experience.tex}
+%\input{resume/honors.tex}
+%\input{resume/presentation.tex}
+%\input{resume/writing.tex}
+%\input{resume/committees.tex}
+\input{resume/education.tex}
+%\input{resume/extracurricular.tex}
+
+
+%-------------------------------------------------------------------------------
+\end{document}
